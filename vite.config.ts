@@ -5,7 +5,12 @@ import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
+    // Base path para GitHub Pages - ajuste se o nome do repositório for diferente
+    const repoName = 'my-profile';
+    const base = process.env.NODE_ENV === 'production' ? `/${repoName}/` : '/';
+    
     return {
+      base,
       server: {
         port: 3000,
         host: '0.0.0.0',
