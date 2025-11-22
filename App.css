@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+@theme {
+    /* Font Families */
+    --font-sans: 'Inter', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* GitHub Theme Colors */
+    --color-gh-bg: #0d1117;
+    --color-gh-subtle: #161b22;
+    --color-gh-border: #30363d;
+    --color-gh-hover: #21262d;
+    --color-gh-text: #c9d1d9;
+    --color-gh-muted: #8b949e;
+    --color-gh-blue: #58a6ff;
+    --color-gh-green: #238636;
+    --color-gh-green-dim: rgba(35, 134, 54, 0.4);
+    --color-gh-purple: #bc8cff;
+    --color-gh-orange: #f78166;
+
+    /* Background Images */
+    --background-image-gradient-radial: radial-gradient(var(--tw-gradient-stops));
+    --background-image-glow-blue: radial-gradient(circle at center, rgba(88, 166, 255, 0.15) 0%, transparent 70%);
+    --background-image-glow-green: radial-gradient(circle at center, rgba(35, 134, 54, 0.15) 0%, transparent 70%);
+
+    /* Animations */
+    --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    --animate-float: float 6s ease-in-out infinite;
+    --animate-blob: blob 10s infinite;
+}
+
+/* Keyframes */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes blob {
+    0% {
+        transform: translate(0px, 0px) scale(1);
+    }
+
+    33% {
+        transform: translate(30px, -50px) scale(1.1);
+    }
+
+    66% {
+        transform: translate(-20px, 20px) scale(0.9);
+    }
+
+    100% {
+        transform: translate(0px, 0px) scale(1);
+    }
+}
+
+body {
+    background-color: #0d1117;
+    color: #c9d1d9;
+    overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0d1117;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #30363d;
+    border-radius: 5px;
+    border: 2px solid #0d1117;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #8b949e;
+}
+
+.grid-bg {
+    background-size: 50px 50px;
+    background-image: linear-gradient(to right, #30363d 1px, transparent 1px),
+        linear-gradient(to bottom, #30363d 1px, transparent 1px);
+    opacity: 0.06;
+}
+
+.glass-panel {
+    background: rgba(22, 27, 34, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid #30363d;
+}
+
+.repo-card {
+    transition: all 0.2s ease;
+}
+
+.repo-card:hover {
+    border-color: #8b949e;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}

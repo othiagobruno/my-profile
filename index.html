@@ -1,107 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-BR" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Thiago Bruno Miranda | Tech Lead & Software Engineer</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ['Inter', 'sans-serif'],
-              mono: ['JetBrains Mono', 'monospace'],
-            },
-            colors: {
-              gh: {
-                bg: '#0d1117',         // Canvas default
-                subtle: '#161b22',     // Canvas subtle (cards)
-                border: '#30363d',     // Border default
-                hover: '#21262d',      // Hover state
-                text: '#c9d1d9',       // FG default
-                muted: '#8b949e',      // FG muted
-                blue: '#58a6ff',       // Accent emphasis
-                green: '#238636',      // Success emphasis
-                green_dim: 'rgba(35, 134, 54, 0.4)',
-                purple: '#bc8cff',     // Done emphasis
-                orange: '#f78166',     // Attention emphasis
-              }
-            },
-            backgroundImage: {
-              'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-              'glow-blue': 'radial-gradient(circle at center, rgba(88, 166, 255, 0.15) 0%, transparent 70%)',
-              'glow-green': 'radial-gradient(circle at center, rgba(35, 134, 54, 0.15) 0%, transparent 70%)',
-            },
-            animation: {
-              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-              'float': 'float 6s ease-in-out infinite',
-              'blob': 'blob 10s infinite',
-            },
-            keyframes: {
-              float: {
-                '0%, 100%': { transform: 'translateY(0)' },
-                '50%': { transform: 'translateY(-10px)' },
-              },
-              blob: {
-                '0%': { transform: 'translate(0px, 0px) scale(1)' },
-                '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
-                '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
-                '100%': { transform: 'translate(0px, 0px) scale(1)' },
-              }
-            }
-          }
-        }
-      }
-    </script>
-    <style>
-      body {
-        background-color: #0d1117;
-        color: #c9d1d9;
-        overflow-x: hidden;
-      }
-      /* Custom Scrollbar */
-      ::-webkit-scrollbar {
-        width: 10px;
-      }
-      ::-webkit-scrollbar-track {
-        background: #0d1117;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #30363d;
-        border-radius: 5px;
-        border: 2px solid #0d1117;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #8b949e;
-      }
-      
-      .grid-bg {
-        background-size: 50px 50px;
-        background-image: linear-gradient(to right, #30363d 1px, transparent 1px),
-                          linear-gradient(to bottom, #30363d 1px, transparent 1px);
-        opacity: 0.06;
-      }
 
-      .glass-panel {
-        background: rgba(22, 27, 34, 0.7);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-        border: 1px solid #30363d;
-      }
-      
-      .repo-card {
-        transition: all 0.2s ease;
-      }
-      .repo-card:hover {
-        border-color: #8b949e;
-        transform: translateY(-2px);
-        box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-      }
-    </style>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thiago Bruno Miranda | Tech Lead & Software Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap"
+    rel="stylesheet">
+  <style>
+
+  </style>
   <script type="importmap">
 {
   "imports": {
@@ -113,10 +24,12 @@
   }
 }
 </script>
-<link rel="stylesheet" href="/index.css">
+  <link rel="stylesheet" href="/index.css">
 </head>
-  <body>
-    <div id="root"></div>
+
+<body>
+  <div id="root"></div>
   <script type="module" src="/index.tsx"></script>
 </body>
+
 </html>
